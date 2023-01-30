@@ -14,9 +14,6 @@
     <div>
       <button @click.prevent="copy">{{message}}</button>
     </div>
-    <div>
-      <p>Espectadores 1</p>
-    </div>
   </div>
 </template>
 
@@ -58,7 +55,6 @@
           await navigator.clipboard.writeText(this.videoUuid);
         } catch(error) {
           console.log(error);
-          alert('Não foi possível copiar o código');
         }
       }
     }
